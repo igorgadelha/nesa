@@ -1,0 +1,126 @@
+// ==========================================================================
+// Theme buttons
+// ==========================================================================
+
+//
+// Example, Try next line!
+//
+@import
+        "bootstrap/bootstrap", // Bootstrap   Styles Core
+        'variables',
+        "_include-media";
+
+
+.btn-white {
+  // bootstrap-sass mixin  button-variant($color, $background, $border);
+    @include button-variant(#000, #FFF, #FFF);
+    border-radius:0px;
+
+}
+
+.btn-black {
+  // bootstrap-sass mixin  button-variant($color, $background, $border);
+    @include button-variant(#FFF, #000, #FFF);
+    background-color: #333 !important;
+    color: #FFF !important;
+    border-radius:0px !important;
+    width: 100%;
+    text-align: center;
+
+}
+
+.btn-green-flat {
+  // bootstrap-sass mixin  button-variant($color, $background, $border);
+    @include button-variant( #FFF, $primary, #000 );
+    width: 100%;
+    text-align: center;
+    border-radius: 0px !important;
+    &:hover, &:active {
+      background-color: $primary !important;
+      color: #FFF !important;
+      border: 1px solid #FFF !important;
+    }
+}
+
+.btn-white-flat {
+  // bootstrap-sass mixin  button-variant($color, $background, $border);
+    @include button-variant( #000, #FFF, $gray );
+    width: 100%;
+    text-align: center;
+    border:1px solid $gray !important;
+    border-radius: 0px !important;
+}
+// amber button
+.btn-amber-flat {
+  // bootstrap-sass mixin  button-variant($color, $background, $border);
+    @include button-variant( $amber, #FFF, $gray );
+    width: 100%;
+    text-align: center;
+    border-radius: 0px !important;
+    max-width: 100px;
+    &:hover, &:active {
+      background-color: $amber;
+      color:white !important;
+    }
+}
+
+#return-to-top {
+    z-index: 999;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    i {
+       color: #fff;
+       margin: 0;
+       position: relative;
+       left: 16px;
+       top: 13px;
+       font-size: 19px;
+       -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+       -ms-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+       transition: all 0.3s ease;
+   }
+
+   &:hover {
+       background: rgba(0, 0, 0, 0.9);
+       i {
+           color: #fff;
+           top: 5px;
+       }
+   }
+}
+
+@include media ( '>=desktop' ) {
+  .btn-green-flat {
+    max-width: 120px !important;
+  }
+  .btn-white-flat {
+    max-width: 120px !important;
+  }
+}
+
+@include media('>=tablet') {}
+@include media('<=phone') {
+  .btn-ammber-flat {
+    max-width: 100% !important;
+  }
+
+}

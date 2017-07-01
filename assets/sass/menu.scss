@@ -1,0 +1,169 @@
+// ==========================================================================
+// Theme menu
+// ==========================================================================
+
+//
+// Example, Try next line!
+//
+@import
+        'variables',
+        "_include-media";
+
+// navbar-default
+.navbar-default {
+  background-color: white !important;
+  border-color: white !important;
+
+  .navbar-brand {
+    img { height: auto; }
+    .navbar-nav { li { a {} } }
+  }
+
+  .toolbar {
+    list-style-type: none;
+    li {
+      display: inline;
+      a { display: block; }
+    }
+  }
+}
+// navbar-default
+
+// menu-principal
+#menu-principal {
+  li {
+    a {
+      color: $primary !important;
+      text-align:center !important;
+      font-size: 11.1pt;
+      padding: 10px 8px;
+
+      &:hover, &:active, &.active {
+        background-color: $primary !important;
+        color: white !important;
+      }
+
+    }
+  }
+}
+// menu-principal
+
+// menu-imprensa
+#menu-imprensa {
+  li {
+    &.active { a { background-color: $primary !important; } }
+  }
+}
+// #menu-imprensa {
+//   float: none !important;
+//   li {
+//     a {
+//           padding: 10px 5px !important;
+//           font-size: 14px !important;
+//     }
+//   }
+// }
+// menu-imprensa
+
+.nav-pills {   text-align: center; }
+
+// navbar-search
+#navbar-search {
+  border-radius: 0px;
+  text-align: center;
+  background-color: #dddcdc;
+
+}
+// navbar-search
+// navbar-search
+.gallery-nav {
+  li {
+    &.active {
+      a {
+        border-radius: 0 !important;
+        background-color: $primary !important;
+        color: white !important;
+      }
+    }
+    a {
+      color: #555555 !important;
+      &:hover {
+        border-radius: 0 !important;
+        background-color: $primary !important;
+        color: white !important;
+      }
+    }
+  }
+}
+
+@include media ( '>=desktop' ) {
+
+  .menu-container {
+    background-image: url('../images/background_nav.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+  }
+  // menu-imprensa
+  #menu-imprensa {
+    float: right;
+    li {
+      // &:first-child {
+      //   a:after {
+      //     content: '/';
+      //     margin-left: 5px;
+      //   }
+      // }
+      a {
+        // font-size: 9pt !important;
+        // padding: 10px 5px;
+      }
+
+      &.active {
+        a { background-color: $primary !important; }
+      }
+
+    }
+
+    #menu-item-41, #menu-item-42 {
+      a {
+        // padding: 3px 6px;
+        // margin-top: 7px;
+        border-radius: 0px;
+      }
+    }
+  }
+  // menu-imprensa
+  // navbar-search
+  #navbar-search { width: 150px; }
+  // navbar-search
+  .gallery-nav {
+    margin-top: 30px;
+ }
+
+}
+
+@include media('>=tablet') {
+
+}
+
+@include media('<=phone') {
+
+  .nav-pills {
+    float: none !important;
+    li {
+      float: none !important;
+      display: inline-block !important;
+    }
+  }
+
+  .navbar-toggle { margin-top:28px !important; }
+
+  .navbar-brand {
+    height: 80px !important;
+    img {
+      width: 100%;
+      max-width: 190px;
+      height: auto;
+    }
+  }
+}

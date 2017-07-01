@@ -1,0 +1,289 @@
+// ==========================================================================
+// TABLE OF CONTENTS:
+// ==========================================================================
+//
+// # Header
+// 		# Title + description
+// 		# Navbar
+// # Wrapper
+// # Content
+// # Sidebar and Widgets
+// # Components
+// 		# Fancy skip link
+// 		# Pagination
+// 		# Comments
+// # Footer
+//
+@import "_include-media", '_variables';
+
+
+// ==========================================================================
+// Fonts
+// ==========================================================================
+
+
+@font-face {
+    font-family: 'futura_ltbold';
+    src: url('../fonts/site/futura-lt-bold-590a469de3fee-webfont.woff2') format('woff2'),
+         url('../fonts/site/futura-lt-bold-590a469de3fee-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'futura_md_btbold';
+    src: url('../fonts/site/tt0144m_-webfont.woff2') format('woff2'),
+         url('../fonts/site/tt0144m_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'futura_ltbold';
+}
+* {
+  // font-family: 'verdana';
+}
+a {
+  color: black;
+}
+@include media ( '>tablet' ) {
+  .container {
+    // width: 1270px;
+  }
+}
+@include media ( '>=phone' ) {
+  .container {
+    // width: 1270px;
+  }
+  .widget-title {
+    text-align: center !important;
+  }
+}
+
+// ==========================================================================
+// Header
+// ==========================================================================
+#header {
+    //
+    // Navbar
+    //
+    #main-navigation {
+      font-family: 'verdana';
+      a {
+        color: $primary !important;
+      }
+    }
+    //
+    // Title, description and image
+    //
+    .page-header {
+        .site-title {}
+        .site-description {
+        }
+    }
+}
+
+// .simple-menu {  margin-top:5px; }
+
+
+
+
+// parallax
+$scroll-factor : .5;
+.parallax {
+    height: 330px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    padding-top: 130px;
+    h2, h1 {
+      // background-color: rgba(255,255,255, 0.7);
+      display: block;
+      margin: 0 auto;
+      font-size: 36pt;
+      padding: 10px 5px;
+    }
+    .entry-meta {
+      margin:0 auto;
+      text-align: center;
+      background-color: rgba(255,255,255, 0.7);
+      padding:5px;
+      max-width: 30%;
+    }
+}
+// parallax
+
+
+
+.header-paralax {
+    height: 80vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    vertical-align: top;
+    transform-origin: center top;
+    transform:
+      translateZ(-#{$scroll-factor * 2}px)
+      scale(1 + $scroll-factor * 2);
+}
+
+// ==========================================================================
+// Wrapper
+// ==========================================================================
+#wrapper {}
+
+// ==========================================================================
+// Content
+// ==========================================================================
+#content {}
+
+//
+// Home
+//
+.home {
+    #content {
+        .post {
+            &.sticky {
+            }
+        }
+    }
+}
+@include media('<=phone') {
+
+  .parallax {
+      height: 330px;
+      padding-top: 130px;
+      h2, h1 {
+        font-size: 18pt;
+      }
+      .entry-meta {
+        max-width: 100%;
+      }
+  }
+
+
+  fieldset{
+    legend {
+      text-align: center;
+    }
+  }
+}
+
+.values {
+  background-image: url('../images/ondas_sobre.png');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 300px 120px;
+  p {
+    font-size: 12pt;
+    line-height: 1.5;
+    padding: 10px;
+  }
+}
+// ==========================================================================
+// Sidebar
+// ==========================================================================
+#sidebar {}
+
+// ==========================================================================
+// Components
+// ==========================================================================
+
+//
+// Fancy skip link
+//
+// Make it look a bit less "bare bones"
+// Also includes focus suppression for the Chrome tabindex="-1" workaround
+//
+#skippy {
+    display: block;
+    padding: 1em;
+    background-color: #f5f5f5;
+    outline: 0;
+}
+
+#skippy .skiplink-text {
+    padding: .5em;
+    outline: 1px dotted;
+}
+
+#content:focus {
+    outline: none;
+}
+
+//
+// Pagination
+//
+.pagination-wrap {
+    text-align: center;
+    margin-top: 15px;
+    .infinite-scroll & {
+        display: none;
+    }
+}
+
+// ==========================================================================
+// Footer
+// ==========================================================================
+
+//
+// Sticky footer styles
+//
+#footer {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding-top: 15px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    overflow-y: scroll;
+}
+
+body {}
+
+@include media('>=desktop') {
+  .overlayer {
+    margin-top: -100px;
+    padding: 5px 10px;
+    color: white;
+    a {
+      color:white;
+      &:hover, &:active {
+        color:$amber;
+        text-decoration: none;
+      }
+    }
+    p {
+      font-weight: bold;
+    }
+  }
+  .gallery-tab-content {
+    margin-bottom: 20px;
+  }
+  #text-2, #text-3 {
+    margin-top:40px;
+  }
+}
+
+@include media('<=phone') {
+  .values {
+    background-position: center top;
+  }
+  #footer {
+    position: relative !important;
+  }
+}

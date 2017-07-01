@@ -1,0 +1,99 @@
+@import
+
+  "_include-media",
+  '_variables'
+  ;
+
+
+@include media ( '>=desktop' ) {
+  // ==========================================================================
+  // slider
+  // ==========================================================================
+  #destaque {
+    h1 {
+      font-size: 48pt;
+      text-align: center;
+    }
+    h2 {
+      // font-size: 15pt;
+      text-align: center;
+    }
+    a {
+      // display: block;
+      max-width: 120px !important;
+      border-radius: 0px !important;
+      margin: 20px auto;
+    }
+
+    .item {
+      max-height:500px;
+      max-height:500px !important;
+      .slider-content {
+        padding: 20px;
+      }
+    }
+
+  }
+
+  .dotsCont {
+    position: absolute;
+    z-index: 30;
+    top: -226px;
+    // top: 555px;
+    width: 100%;
+    height: 50px;
+
+    .owl-dot {
+      display: inline-block;
+      margin: 5px;
+      &.active {
+        span {
+
+        }
+      }
+
+      span {
+        cursor: pointer;
+        z-index: 31;
+        background: rgba(255,255,255,0.4);
+        width: 20px;
+        height: 20px;
+        display: block;
+        border-radius: 50%;
+      }
+
+    }
+  }
+
+}
+
+@include media('>=tablet') { }
+
+@include media('<=phone') {
+  html {
+    // margin: 0 !important;
+  }
+  body {
+    // margin-top:70px !important;
+  }
+
+  #destaque {
+    h1 {
+      font-size: 23pt;
+      text-align: center;
+    }
+    h2 {
+      font-size: 15pt;
+      text-align: center;
+    }
+    a {
+      display: block;
+      margin: 20px 10px;
+    }
+  }
+
+
+  .tab-pane {
+    padding-top: 10px;
+  }
+}

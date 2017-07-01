@@ -1,0 +1,57 @@
+@import
+
+  "_include-media",
+  '_variables'
+  ;
+
+.date {
+  text-align: center;
+  display: block;
+  width: 100%;
+  &.number {
+    font-weight: bold;
+    font-size: 32pt;
+  }
+  &.month {
+    font-size: 12pt;
+  }
+}
+.article {
+  .entry-summary {
+      margin-top:20px !important;
+    p {
+      font-size: 12pt;
+      padding: 10px;
+      line-height: 1.5;
+      text-align: justify;
+    }
+  }
+}
+
+@include media('>=desktop') {}
+@include media('>=tablet') {}
+@include media('<=phone') {
+
+    // posts
+    .article {
+        margin-top:20px !important;
+        .entry-summary {
+          text-align: justify;
+          padding: 5px;
+          margin-top: 20px;
+          line-height: 1.5;
+          font-size:12pt;
+        }
+    }
+    .entry-title {
+      text-align: center;
+      a {
+        > span {
+          display: block;
+          float: left;
+          max-width: 70px;
+        }
+      }
+    }
+
+}

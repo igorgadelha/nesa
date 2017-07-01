@@ -1,0 +1,47 @@
+// ==========================================================================
+// Theme Custom Variables
+// ==========================================================================
+
+//
+// Example, Try next line!
+//
+@import
+        "bootstrap/bootstrap", // Bootstrap   Styles Core
+        "_include-media";
+// $brand-primary: blueviolet;
+
+// Color Schemes
+
+// Buttons
+
+// bootstrap-sass mixin  button-variant($color, $background, $border);
+$primary: #079ca5;
+$gray: #cecccc;
+$amber: #faa613;
+
+.text-white { color:white; }
+.text-gray { color:$gray; }
+.text-green { color:$primary; }
+.text-amber { color:$amber; }
+
+
+.highlight-title { font-size: 60pt; }
+
+a.category-link {
+  margin-top:40px;
+  font-size: 10pt;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+}
+
+@include media('>=desktop') {
+  h2.headline {
+    font-size: 36pt;
+  }
+}
+
+@include media('<=phone') {
+  .headline { text-align: center; }
+  .highlight-title { font-size: 36pt !important; }
+}

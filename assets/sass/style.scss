@@ -1,0 +1,25 @@
+// ==========================================================================
+// Theme Style Main
+// ==========================================================================
+
+/*!
+Theme Name: Odin
+Author URI: http://wpod.in/
+Description: Odin main stylesheet.
+Author: the Odin team
+Author URI: http://wpod.in/#colaboradores
+*/
+
+@import
+        "_include-media",           // Theme       Custom Variables
+        "variables",           // Theme       Custom Variables
+        "bootstrap/bootstrap", // Bootstrap   Styles Core
+        "wordpress/wordpress", // WordPress   Styles Core
+        //"woocommerce",       // WooCommerce Styles Core
+        "odin/core",           // Odin        Styles Core
+        "buttons"  ,             // Theme       Custom Layout
+        "menu"  ,             // Theme       Custom Layout
+        "slider",           // Odin        Styles Core
+        "posts",           // Odin        Styles Core
+        "layout"               // Theme       Custom Layout
+;
