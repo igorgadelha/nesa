@@ -8,6 +8,8 @@
 *.swp
 *.vi
 *.ini
+*.rar
+*.zip
 *~
 
 # OS or Editor folders
@@ -27,6 +29,7 @@ Thumbs.db
 # Folders to ignore
 bower_components
 node_modules
+assets/library
 .sass-cache
 
 # Ignore project files
@@ -34,3 +37,4 @@ sftp-config.json
 .ftppass
 *.zip
 src/node_modules/*
+assets/library/*
