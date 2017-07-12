@@ -71,7 +71,7 @@
               <?php _e( 'Search:', 'odin' ); ?>
             </label>
             <div class="form-group">
-              <input type="search" value="<?php echo get_search_query(); ?>" class="form-control" name="s" placeholder="digite aqui sua busca" id="navbar-search" />
+              <input type="search" value="<?php echo get_search_query(); ?>" class="form-control" name="s" placeholder="Pesquisar" id="navbar-search" />
             </div>
             <button type="submit" class="btn btn-green-flat hidden-lg hidden-md"><?php _e( 'Search', 'odin' ); ?></button>
           </form>

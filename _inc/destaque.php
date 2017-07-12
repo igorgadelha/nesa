@@ -5,6 +5,7 @@
         'posts_per_page' => 5,
         'post_type'      => 'destaque',
         'orderby'        => 'menu_order',
+				'post_status'      => 'publish',
         // 'paged'          => $paged
       )
   );
