@@ -363,6 +363,7 @@ function posts_order_wpse_91866()
     add_post_type_support(  'galeria', 'page-attributes' );
     add_post_type_support(  'audio', 'page-attributes' );
     add_post_type_support(  'video', 'page-attributes' );
+    add_post_type_support(  'destaque', 'page-attributes' );
 }
 
 
@@ -404,6 +405,7 @@ function my_custom_taxonomy_valores_columns_content( $content, $column_name, $te
     }
 	return $content;
 }
+
 function my_custom_taxonomy_columns_content( $content, $column_name, $term_id )
 {
     if ( 'shortcode' == $column_name ) {
@@ -438,6 +440,7 @@ require_once get_template_directory() . '/core/helpers.php';
 /**
  * post-types.
  */
+
 require_once get_template_directory() . '/classes/post-types.php';
 
 /**
