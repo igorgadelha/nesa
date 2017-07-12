@@ -40,7 +40,7 @@
           wp_nav_menu(
             array(
               'theme_location' => 'contact-menu',
-              'depth'          => 3,
+              'depth'          => 2,
               'container'      => false,
               'menu_class'     => 'nav nav-pills',
               'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
@@ -58,7 +58,7 @@
             wp_nav_menu(
               array(
                 'theme_location' => 'main-menu',
-                'depth'          => 2,
+                'depth'          => 3,
                 'container'      => false,
                 'menu_class'     => 'nav navbar-nav',
                 'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',

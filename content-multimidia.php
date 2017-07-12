@@ -9,7 +9,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-4'); ?> style="margin-bottom:10px;">
+<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-4'); ?> style="margin-bottom:10px; height: 300px;">
 	<div class=""  style="height: 180px;">
 		<?php	the_post_thumbnail( 'large', array ('class' => 'img-responsive thumbnail' ) ); ?>
 	</div>

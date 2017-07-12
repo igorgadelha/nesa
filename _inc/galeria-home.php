@@ -39,7 +39,7 @@
 
       <?php while ( $new_query->have_posts() ) : $new_query->the_post(); ?>
       		<div class="col-xs-12 col-md-4 col-lg-4 center-block"  style="min-height:250px;">
-            <?php	the_post_thumbnail( 'large', array ('class' => 'img-responsive center-block' ) ); ?>
+            <?php	the_post_thumbnail( 'large', array ('class' => 'img-responsive center-block', 'style' => 'height:250px !important;' ) ); ?>
             <div class="overlayer gallery">
               <?php the_title( '<h4 class="entry-title"><a class="text-black" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
               <!-- <?php the_content(); ?> -->
@@ -49,7 +49,7 @@
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
       </div>
-			<hr/>
+			<!-- <hr/> -->
 			<div class="row">
 				<a class="btn btn-green-flat text-center center-block" href="/galeria">Galerias</a>
 			</div>
@@ -77,7 +77,7 @@
 
       <?php while ( $new_query->have_posts() ) : $new_query->the_post(); ?>
       		<div class="col-xs-12  col-md-4 col-lg-4 center-block"  style="min-height:250px;">
-            <?php	the_post_thumbnail( 'large', array ('class' => 'img-responsive center-block' ) ); ?>
+            <?php	the_post_thumbnail( 'large', array ('class' => 'img-responsive center-block', 'style' => 'height:250px !important;' ) ); ?>
             <div class="overlayer gallery">
               <?php the_title( '<h4 class="entry-title"><a class="text-black" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
               <?php //the_content(); ?>
@@ -88,7 +88,7 @@
         <?php wp_reset_postdata(); ?>
 
       </div>
-			<hr/>
+			<!-- <hr/> -->
 			<div class="row center-block">
 				<a class="btn btn-green-flat text-center center-block" href="/video">Vídeos</a>
 			</div>
@@ -116,7 +116,7 @@
 
       <?php while ( $new_query->have_posts() ) : $new_query->the_post(); ?>
       		<div class="col-xs-12 col-md-4 col-lg-4 center-block" style="min-height:250px;">
-            <?php	the_post_thumbnail( 'large', array ('class' => 'img-responsive center-block' ) ); ?>
+            <?php	the_post_thumbnail( 'large', array ('class' => 'img-responsive center-block', 'style' => 'height:250px !important;' ) ); ?>
             <div class="overlayer gallery">
               <?php the_title( '<h4 class="entry-title"><a class="text-black" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
               <?php //the_content(); ?>
@@ -127,7 +127,7 @@
         <?php wp_reset_postdata(); ?>
 
       </div>
-			<hr/>
+			<!-- <hr/> -->
 			<div class="row center-block">
 				<a class="btn btn-green-flat text-center center-block" href="/audio">Áudios</a>
 			</div>

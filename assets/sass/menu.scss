@@ -32,6 +32,12 @@
 // menu-principal
 #menu-principal {
   li {
+    &.active {
+      a {
+          background-color: $primary !important;
+          color: white !important;
+      }
+    }
     a {
       color: $primary !important;
       text-align:center !important;
