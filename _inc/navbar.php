@@ -20,7 +20,7 @@
       <?php endif; ?>
       </div>
       <div class=" col-md-9 col-lg-9 col-xs-12 menu-container">
-        <div class="col-md-3 col-lg-3 col-xs-12 simple-menu">
+        <div class="col-md-2 col-lg-2 col-xs-12 simple-menu">
           <!-- Collect the nav links, forms, and other content for toggling -->
           <ul class="nav nav-pills">
             <li><a href="javascript:(0);" class="font-resizer minus"><i class="fa fa-font" aria-hidden="true"></i>-</a></li>
@@ -28,7 +28,7 @@
           </ul>
         </div>
 
-        <div class="col-md-4 col-lg-4 col-xs-12 simple-menu">
+        <div class="col-md-5 col-lg-5 col-xs-12 simple-menu">
           <ul class="nav nav-pills">
             <?php get_template_part('_inc/_social-links-header'); ?>
           </ul>
