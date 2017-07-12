@@ -50,7 +50,7 @@
         <?php wp_reset_postdata(); ?>
       </div>
 			<!-- <hr/> -->
-			<div class="row">
+			<div class="row" style="margin-top:15px;">
 				<a class="btn btn-green-flat text-center center-block" href="/galeria">Galerias</a>
 			</div>
     </div>
@@ -89,7 +89,7 @@
 
       </div>
 			<!-- <hr/> -->
-			<div class="row center-block">
+			<div class="row center-block"  style="margin-top:15px;">
 				<a class="btn btn-green-flat text-center center-block" href="/video">Vídeos</a>
 			</div>
     </div>
@@ -128,7 +128,7 @@
 
       </div>
 			<!-- <hr/> -->
-			<div class="row center-block">
+			<div class="row center-block"  style="margin-top:15px;">
 				<a class="btn btn-green-flat text-center center-block" href="/audio">Áudios</a>
 			</div>
   </div>
