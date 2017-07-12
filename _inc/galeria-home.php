@@ -38,8 +38,8 @@
       <div class="row">
 
       <?php while ( $new_query->have_posts() ) : $new_query->the_post(); ?>
-      		<div class="col-xs-12 col-md-4 col-lg-4 center-block"  style="min-height:250px;">
-            <?php	the_post_thumbnail( 'large', array ('class' => 'img-responsive center-block', 'style' => 'height:250px !important;' ) ); ?>
+      		<div class="col-xs-12 col-md-4 col-lg-4 center-block"  style="min-height:230px;">
+            <?php	the_post_thumbnail( 'large', array ('class' => 'img-responsive center-block', 'style' => 'height:230px !important;' ) ); ?>
             <div class="overlayer gallery">
               <?php the_title( '<h4 class="entry-title"><a class="text-black" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
               <!-- <?php the_content(); ?> -->
@@ -76,8 +76,8 @@
       <div class="row">
 
       <?php while ( $new_query->have_posts() ) : $new_query->the_post(); ?>
-      		<div class="col-xs-12  col-md-4 col-lg-4 center-block"  style="min-height:250px;">
-            <?php	the_post_thumbnail( 'large', array ('class' => 'img-responsive center-block', 'style' => 'height:250px !important;' ) ); ?>
+      		<div class="col-xs-12  col-md-4 col-lg-4 center-block"  style="min-height:230px;">
+            <?php	the_post_thumbnail( 'large', array ('class' => 'img-responsive center-block', 'style' => 'height:230px !important;' ) ); ?>
             <div class="overlayer gallery">
               <?php the_title( '<h4 class="entry-title"><a class="text-black" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
               <?php //the_content(); ?>
@@ -115,8 +115,8 @@
       <div class="row">
 
       <?php while ( $new_query->have_posts() ) : $new_query->the_post(); ?>
-      		<div class="col-xs-12 col-md-4 col-lg-4 center-block" style="min-height:250px;">
-            <?php	the_post_thumbnail( 'large', array ('class' => 'img-responsive center-block', 'style' => 'height:250px !important;' ) ); ?>
+      		<div class="col-xs-12 col-md-4 col-lg-4 center-block" style="min-height:230px;">
+            <?php	the_post_thumbnail( 'large', array ('class' => 'img-responsive center-block', 'style' => 'height:230px !important;' ) ); ?>
             <div class="overlayer gallery">
               <?php the_title( '<h4 class="entry-title"><a class="text-black" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
               <?php //the_content(); ?>
