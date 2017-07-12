@@ -70,6 +70,7 @@
             <label for="navbar-search" class="sr-only">
               <?php _e( 'Search:', 'odin' ); ?>
             </label>
+
             <div class="form-group">
               <input type="search" value="<?php echo get_search_query(); ?>" class="form-control" name="s" placeholder="Pesquisar" id="navbar-search" />
             </div>
