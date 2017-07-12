@@ -194,48 +194,12 @@ function odin_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name' => __( 'Main Sidebar', 'odin' ),
+			'name' => __( 'Sidebar', 'odin' ),
 			'id' => 'main-sidebar',
-			'description' => __( 'Site Main Sidebar', 'odin' ),
+			'description' => __( 'Barra lateral do site (internas)', 'odin' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widgettitle widget-title">',
-			'after_title' => '</h3>',
-		)
-	);
-
-	register_sidebar(
-		array(
-			'name' => __( 'Footer widgets Top', 'odin' ),
-			'id' => 'footer-sidebar-top',
-			'description' => __( 'Site Footer Top widget', 'odin' ),
-			// 'before_widget' => '<div id="%1$s" class="widget col-md-3 col-lg-3 col-xs-12 %2$s">',
-			// 'after_widget' => '</div>',
-			'before_title' => '<h3 class="text-green widgettitle widget-title">',
-			'after_title' => '</h3>',
-		)
-	);
-
-	register_sidebar(
-		array(
-			'name' => __( 'Footer widgets Top', 'odin' ),
-			'id' => 'footer-sidebar-top-1',
-			'description' => __( 'Site Footer Top widget 1', 'odin' ),
-			// 'before_widget' => '<div id="%1$s" class="widget col-md-3 col-lg-3 col-xs-12 %2$s">',
-			// 'after_widget' => '</div>',
-			'before_title' => '<h3 class="text-green widgettitle widget-title">',
-			'after_title' => '</h3>',
-		)
-	);
-
-	register_sidebar(
-		array(
-			'name' => __( 'Footer widgets Top', 'odin' ),
-			'id' => 'footer-sidebar-top-2',
-			'description' => __( 'Site Footer Top widget 2', 'odin' ),
-			// 'before_widget' => '<div id="%1$s" class="widget col-md-3 col-lg-3 col-xs-12 %2$s">',
-			// 'after_widget' => '</div>',
-			'before_title' => '<h3 class="text-green widgettitle widget-title">',
 			'after_title' => '</h3>',
 		)
 	);
@@ -254,9 +218,9 @@ function odin_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name' => __( 'Footer widgets left', 'odin' ),
+			'name' => __( 'Endereço Esquerdo', 'odin' ),
 			'id' => 'footer-sidebar-left',
-			'description' => __( 'Site Footer left widget', 'odin' ),
+			'description' => __( 'Endereço do lado esquerdo da logotipo', 'odin' ),
 			'before_widget' => '<div id="%1$s" class="widget col-md-12 col-lg-12 col-xs-12 %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="text-green widgettitle widget-title">',
@@ -266,9 +230,9 @@ function odin_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name' => __( 'Footer widgets right ', 'odin' ),
+			'name' => __( 'Endereço Direito', 'odin' ),
 			'id' => 'footer-sidebar-right',
-			'description' => __( 'Site Footer right widget', 'odin' ),
+			'description' => __( 'Endereço do lado direito da logotipo', 'odin' ),
 			'before_widget' => '<div id="%1$s" class="widget col-md-12 col-lg-12 col-xs-12 %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widgettitle widget-title">',
