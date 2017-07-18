@@ -161,10 +161,10 @@
       display: inline-block !important;
     }
   }
-  
+
 }
 
-@include media('<=phone') {
+@include media('<=tablet') {
 
   .nav-pills {
     float: none !important;
