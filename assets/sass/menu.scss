@@ -152,8 +152,16 @@
 
 }
 
-@include media('>=tablet') {
+@include media('<=tablet') {
 
+  .nav-pills {
+    float: none !important;
+    li {
+      float: none !important;
+      display: inline-block !important;
+    }
+  }
+  
 }
 
 @include media('<=phone') {
