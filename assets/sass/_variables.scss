@@ -41,7 +41,7 @@ a.category-link {
   }
 }
 
-@include media('<=phone') {
+@include media('<=tablet') {
   .headline { text-align: center; }
   .highlight-title { font-size: 36pt !important; }
 }
