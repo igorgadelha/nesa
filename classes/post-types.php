@@ -211,7 +211,7 @@ function odin_acoes_da_obra_cpt() {
 
     $video->set_labels(
         array(
-            'menu_name' => __( 'Ações Socioambientais da obra', 'odin' )
+            'menu_name' => __( 'Ações Socioambientais', 'odin' )
         )
     );
 

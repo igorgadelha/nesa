@@ -42,6 +42,7 @@ a.category-link {
 }
 
 @include media('<=tablet') {
+  .widgettitle { text-align: center !important; }
   .headline { text-align: center; }
   .highlight-title { font-size: 36pt !important; }
 }
