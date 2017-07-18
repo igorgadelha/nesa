@@ -51,6 +51,10 @@
           float: left;
           max-width: 70px;
         }
+        span.hidden-xs {
+          display: block !important;
+          text-align: center;
+        }
       }
     }
 
