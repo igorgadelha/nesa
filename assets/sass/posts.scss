@@ -47,7 +47,7 @@
       text-align: center;
       a {
         > span {
-          display: block;
+          display: block !important;
           float: left;
           max-width: 70px;
         }
