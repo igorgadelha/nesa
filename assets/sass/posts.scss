@@ -30,7 +30,7 @@
 
 @include media('>=desktop') {}
 @include media('>=tablet') {}
-@include media('<=phone') {
+@include media('<=tablet') {
 
     // posts
     .article {
