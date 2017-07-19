@@ -146,6 +146,14 @@ function odin_diretoria_cpt() {
     $video->set_labels(
         array(
             'menu_name' => __( 'Diretoria', 'odin' )
+            'name'               => _x( 'Diretor', 'odin' ),
+            'singular_name'      => _x( 'Diretor', 'odin' ),
+            'add_new'            => _x( 'Adicionar novo Diretor', 'odin' ),
+            'new_item'           => __( 'Novo Diretor', 'odin' ),
+            'edit_item'          => __( 'Editar Diretor', 'odin' ),
+            'view_item'          => __( 'Ver Diretor', 'odin' ),
+            'all_items'          => __( 'Todos os Diretores', 'odin' ),
+            'search_items'       => __( 'Pesquisar Diretores', 'odin' ),
         )
     );
 
@@ -227,7 +235,7 @@ function odin_acoes_da_obra_cpt() {
             'new_item'           => __( 'Nova Ação Socioambiental', 'odin' ),
             'edit_item'          => __( 'Editar Ação Socioambiental', 'odin' ),
             'view_item'          => __( 'Ver Ação Socioambiental', 'odin' ),
-            'all_items'          => __( 'Todos as Ações Socioambientais', 'odin' ),
+            'all_items'          => __( 'Todas as Ações Socioambientais', 'odin' ),
             'search_items'       => __( 'Pesquisar Ações Socioambientais', 'odin' ),
         )
     );
