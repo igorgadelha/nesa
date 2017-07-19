@@ -145,10 +145,10 @@ function odin_diretoria_cpt() {
 
     $video->set_labels(
         array(
-            'menu_name' => __( 'Diretoria', 'odin' )
-            'name'               => _x( 'Diretor', 'odin' ),
-            'singular_name'      => _x( 'Diretor', 'odin' ),
-            'add_new'            => _x( 'Adicionar novo Diretor', 'odin' ),
+            'menu_name' => __( 'Diretoria', 'odin' ),
+            'name'               => __( 'Diretor', 'odin' ),
+            'singular_name'      => __( 'Diretor', 'odin' ),
+            'add_new'            => __( 'Adicionar novo Diretor', 'odin' ),
             'new_item'           => __( 'Novo Diretor', 'odin' ),
             'edit_item'          => __( 'Editar Diretor', 'odin' ),
             'view_item'          => __( 'Ver Diretor', 'odin' ),
@@ -176,9 +176,9 @@ function odin_partners_cpt() {
     $video->set_labels(
         array(
             'menu_name' => __( 'Composição Acionária', 'odin' ),
-            'name'               => _x( 'Acionista', 'odin' ),
-            'singular_name'      => _x( 'Acionista', 'odin' ),
-            'add_new'            => _x( 'Adicionar novo Acionista', 'odin' ),
+            'name'               => __( 'Acionista', 'odin' ),
+            'singular_name'      => __( 'Acionista', 'odin' ),
+            'add_new'            => __( 'Adicionar novo Acionista', 'odin' ),
             'new_item'           => __( 'Novo Acionista', 'odin' ),
             'edit_item'          => __( 'Editar Acionista', 'odin' ),
             'view_item'          => __( 'Ver Acionista', 'odin' ),
@@ -229,9 +229,9 @@ function odin_acoes_da_obra_cpt() {
     $video->set_labels(
         array(
             'menu_name' => __( 'Ações Socioambientais', 'odin' ),
-            'name'               => _x( 'Ação Socioambiental', 'odin' ),
-            'singular_name'      => _x( 'Ação Socioambiental', 'odin' ),
-            'add_new'            => _x( 'Adicionar nova Ação Socioambiental', 'odin' ),
+            'name'               => __( 'Ação Socioambiental', 'odin' ),
+            'singular_name'      => __( 'Ação Socioambiental', 'odin' ),
+            'add_new'            => __( 'Adicionar nova Ação Socioambiental', 'odin' ),
             'new_item'           => __( 'Nova Ação Socioambiental', 'odin' ),
             'edit_item'          => __( 'Editar Ação Socioambiental', 'odin' ),
             'view_item'          => __( 'Ver Ação Socioambiental', 'odin' ),
@@ -259,9 +259,9 @@ function odin_valores_cpt() {
     $video->set_labels(
         array(
             'menu_name' => __( 'Valores', 'odin' ),
-            'name'               => _x( 'Valor', 'odin' ),
-            'singular_name'      => _x( 'Valor', 'odin' ),
-            'add_new'            => _x( 'Adicionar novo valor', 'odin' ),
+            'name'               => __( 'Valor', 'odin' ),
+            'singular_name'      => __( 'Valor', 'odin' ),
+            'add_new'            => __( 'Adicionar novo valor', 'odin' ),
             'new_item'           => __( 'Novo Valor', 'odin' ),
             'edit_item'          => __( 'Editar Valor', 'odin' ),
             'view_item'          => __( 'Ver Valor', 'odin' ),
