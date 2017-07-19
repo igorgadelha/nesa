@@ -233,7 +233,16 @@ function odin_valores_cpt() {
 
     $video->set_labels(
         array(
-            'menu_name' => __( 'Valores', 'odin' )
+            'menu_name' => __( 'Valores', 'odin' ),
+            'name'               => _x( 'Valor', 'odin' ),
+            'singular_name'      => _x( 'Valor', 'odin' ),
+            'add_new'            => _x( 'Adicionar novo valor', 'odin' ),
+            'add_new_item'       => __( 'Add New Book', 'odin' ),
+            'new_item'           => __( 'Novo Valor', 'odin' ),
+            'edit_item'          => __( 'Editar Valor', 'odin' ),
+            'view_item'          => __( 'Ver Valor', 'odin' ),
+            'all_items'          => __( 'Todos os Valores', 'odin' ),
+            'search_items'       => __( 'Pesquisar Valores', 'odin' ),
         )
     );
 
