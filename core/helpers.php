@@ -410,13 +410,16 @@ function odin_breadcrumbs( $homepage = '' ) {
 			// Displays the post type that the taxonomy belongs.
 			if ( ! empty( $taxonomy->object_type ) ) {
 				// Get correct Woocommerce Post Type crumb
-				if ( is_woocommerce() ) {
-					$shop_page    = get_post( wc_get_page_id( 'shop' ) );
-					echo '<li><a href="' . esc_url( get_permalink( $shop_page ) ) . '">' . get_the_title( $shop_page ) . '</a></li>';
-				} else {
-					$_post_type = array_shift( $taxonomy->object_type );
-					$post_type = get_post_type_object( $_post_type );
-					echo '<li><a href="' . get_post_type_archive_link( $post_type->name ) . '">' . $post_type->label . '</a></li> ';
+
+				if (! function_exists( 'is_woocommerce' ) ) {
+					// if ( is_woocommerce() ) {
+					// 	$shop_page    = get_post( wc_get_page_id( 'shop' ) );
+					// 	echo '<li><a href="' . esc_url( get_permalink( $shop_page ) ) . '">' . get_the_title( $shop_page ) . '</a></li>';
+					// } else {
+						$_post_type = array_shift( $taxonomy->object_type );
+						$post_type = get_post_type_object( $_post_type );
+						echo '<li><a href="' . get_post_type_archive_link( $post_type->name ) . '">' . $post_type->label . '</a></li> ';
+					// }
 				}
 			}
 

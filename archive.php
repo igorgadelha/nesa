@@ -23,7 +23,7 @@ get_header(); ?>
 				<?php get_template_part( '_inc/breadcrumb' ); ?>
 
 				<div class="row" style="margin-bottom:20px;">
-					<form method="get" class="form-inline" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+					<form method="get" class="form-inline" action="<?php echo '/'; ?>" role="search">
 						<fieldset>
 							<legend><?php _e( 'Search:', 'odin' ); ?></legend>
 
@@ -37,8 +37,6 @@ get_header(); ?>
 
 							<div class="form-group">
 								<select class="form-control" id="sct-multmidia" name="post_type">
-									<option default>Pesquisar por</option>
-									<option value="" >Todos</option>
 									<option value="audio">Áudios</option>
 									<option value="video">Vídeos</option>
 									<option value="galeria">Galerias</option>

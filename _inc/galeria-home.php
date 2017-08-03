@@ -1,17 +1,28 @@
 
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$('ul.gallery-nav > li > a').click(function (e) {
+		$this = $(this);
+		console.log(this);
+		$('a.cat-change').attr('href',$this.data('url'));
+		$('a.cat-change').text($this.data('title'));
+	});
+
+});
+</script>
 	<div class="row">
     <div class="col-md-4 col-lg-4 col-xs-12">
       <h2 class="text-gray headline">Multimídia</h2>
     </div>
     <div class="col-md-4 col-lg-4 col-xs-12">
       <ul class="nav nav-pills gallery-nav">
-        <li class="active"><a data-toggle="pill" href="#menu1">Galerias</a></li>
-        <li><a data-toggle="pill" href="#menu2">Vídeos</a></li>
-        <li><a data-toggle="pill" href="#menu3">Áudios</a></li>
+        <li class="active"><a data-toggle="pill" href="#menu1" data-url="<?php echo get_post_type_archive_link( 'galeria' ) ?>" data-title="+ Galerias">Galerias</a></li>
+        <li><a data-toggle="pill" href="#menu2" data-url="<?php echo get_post_type_archive_link( 'video' ) ?>" data-title="+ Vídeos">Vídeos</a></li>
+        <li><a data-toggle="pill" href="#menu3"data-url="<?php echo get_post_type_archive_link( 'audio' ) ?>" data-title="+ Áudios">Áudios</a></li>
       </ul>
     </div>
     <div class="col-md-4 col-lg-4 col-xs-12">
-      <a href="/video" class="pull-right category-link text-amber hidden-xs">+ Vídeos</a>
+      <a href="<?php echo get_post_type_archive_link( 'galeria' ) ?>" class="pull-right category-link cat-change text-amber hidden-xs">+ Galerias</a>
     </div>
 	</div>
 
@@ -51,7 +62,7 @@
       </div>
 			<!-- <hr/> -->
 			<div class="row" style="margin-top:15px;">
-				<a class="btn btn-green-flat text-center center-block" href="/galeria">Galerias</a>
+				<a class="btn btn-green-flat text-center center-block hidden-md  hidden-lg" href="<?php echo esc_url( home_url( '/' ) ); ?>galeria">Galerias</a>
 			</div>
     </div>
     <div id="menu2" class="tab-pane fade">
@@ -90,7 +101,7 @@
       </div>
 			<!-- <hr/> -->
 			<div class="row center-block"  style="margin-top:15px;">
-				<a class="btn btn-green-flat text-center center-block" href="/video">Vídeos</a>
+				<a class="btn btn-green-flat text-center center-block hidden-md  hidden-lg" href="/video">Vídeos</a>
 			</div>
     </div>
     <div id="menu3" class="tab-pane fade">
@@ -129,7 +140,7 @@
       </div>
 			<!-- <hr/> -->
 			<div class="row center-block"  style="margin-top:15px;">
-				<a class="btn btn-green-flat text-center center-block" href="/audio">Áudios</a>
+				<a class="btn btn-green-flat text-center center-block hidden-md  hidden-lg" href="/audio">Áudios</a>
 			</div>
   </div>
 </div>

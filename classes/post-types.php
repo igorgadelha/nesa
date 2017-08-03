@@ -19,7 +19,13 @@ function odin_videos_cpt() {
 						'menu_icon'	=> 'dashicons-video-alt3',
 						'public' => true,
 						'rewrite' => array('slug' => 'video'),
-            'show_in_nav_menus' => true
+            'show_in_nav_menus' => true,
+            'publicly_queryable'  => true,
+            'exclude_from_search' => false,
+            'has_archive'         => true,
+            'query_var'           => true,
+            'can_export'          => true,
+            'rewrite'             => true,
         )
     );
 		flush_rewrite_rules();
@@ -45,7 +51,13 @@ function odin_audio_cpt() {
 						'menu_icon'	=> 'dashicons-format-audio',
 						'public' => true,
 						'rewrite' => array('slug' => 'audio'),
-            'show_in_nav_menus' => true
+            'show_in_nav_menus' => true,
+            'publicly_queryable'  => true,
+            'exclude_from_search' => false,
+            'has_archive'         => true,
+            'query_var'           => true,
+            'can_export'          => true,
+            'rewrite'             => true,
         )
     );
 		flush_rewrite_rules();
@@ -85,7 +97,13 @@ function odin_gallery_cpt() {
 						'menu_icon'	=> 'dashicons-images-alt2',
 						'public' => true,
 						'rewrite' => array('slug' => 'galeria'),
-            'show_in_nav_menus' => true
+            'show_in_nav_menus' => true,
+            'publicly_queryable'  => true,
+            'exclude_from_search' => false,
+            'has_archive'         => true,
+            'query_var'           => true,
+            'can_export'          => true,
+            'rewrite'             => true,
         )
     );
 		flush_rewrite_rules();
@@ -131,6 +149,12 @@ function odin_transparence_cpt() {
         array(
             'supports' => array( 'title', 'editor' ),
 						'menu_icon'	=> 'dashicons-media-document',
+            'publicly_queryable'  => true,
+            'exclude_from_search' => false,
+            'has_archive'         => true,
+            'query_var'           => true,
+            'can_export'          => true,
+            'rewrite'             => true,
         )
     );
 }
@@ -161,6 +185,7 @@ function odin_diretoria_cpt() {
         array(
             'supports' => array( 'title', 'editor', 'thumbnail' ),
 						'menu_icon'	=> 'dashicons-admin-users',
+
         )
     );
 }

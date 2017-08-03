@@ -17,7 +17,7 @@
 			else :
 				$doc_file_type = get_post_meta( get_the_ID(),'doc_file_type', true );
 				$doc_file_link = get_post_meta( get_the_ID(), 'doc_files', true );
-				echo '<i class="fa fa-5x center-block text-center '. $doc_file_type.'" aria-hidden="true"></i>';
+				echo '<i class="fa fa-5x center-block text-center '. $doc_file_type.'" aria-hidden="true" style="margin-top: 40px;font-size: 100pt;"></i>';
 			endif;
 			?>
 	</div>

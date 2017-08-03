@@ -62,6 +62,7 @@ var fontResizer = (function(){
 	$('#destaque').owlCarousel({
 		items: 1,
 		dots: true,
+		loop:true,
 		lazyLoad: true,
 		autoplay: true,
 		autoplayHoverPause: true
@@ -86,7 +87,10 @@ var fontResizer = (function(){
 	$('.destaque').owlCarousel({
 		items: 1,
 		dots: true,
-		lazyLoad: true
+		loop:true,
+		lazyLoad: true,
+		autoplay: true,
+		autoplayHoverPause: true
 	});
 
 	$('.acionistas').owlCarousel({
