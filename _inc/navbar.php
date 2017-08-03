@@ -40,11 +40,11 @@
           wp_nav_menu(
             array(
               'theme_location' => 'contact-menu',
-              'depth'          => 2,
+              'depth'          => 3,
               'container'      => false,
               'menu_class'     => 'nav nav-pills',
-              'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-              'walker'         => new Odin_Bootstrap_Nav_Walker()
+              'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+              'walker'            => new wp_bootstrap_navwalker())
               )
             );
             ?>
