@@ -188,9 +188,10 @@ function odin_transparence_cpt_metabox () {
 				array(
 				    'id'          => 'doc_files', // Obrigatório
 				    'label'       => __( 'upload do arquivo', 'odin' ), // Obrigatório
-				    'type'        => 'image_plupload', // Obrigatório
+				    'type'        => 'upload', // Obrigatório
 				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
 				    'description' => __( 'Faça upload ou selecione o arquivo que será anexado', 'odin' ), // Opcional
+						'attributes' => array('multiple'=>'multiple')
 				),
         array(
             'id'   => 'separator1', // Obrigatório

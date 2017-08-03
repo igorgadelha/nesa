@@ -38,7 +38,7 @@ require_once get_template_directory() . '/core/classes/class-contact-form.php';
 // require_once get_template_directory() . '/core/classes/class-user-meta.php';
 require_once get_template_directory() . '/core/classes/class-post-status.php';
 require_once get_template_directory() . '/core/classes/class-term-meta.php';
-require_once get_template_directory() .'wp_bootstrap_navwalker.php';
+// require_once ('wp-bootstrap-navwalker.php');
 /**
  * Odin Widgets.
  */

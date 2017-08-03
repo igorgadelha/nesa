@@ -490,7 +490,7 @@ class Odin_Metabox {
 	 * @return string          HTML of the field.
 	 */
 	protected function field_upload( $id, $current, $attrs ) {
-		echo sprintf( '<input type="text" id="%1$s" name="%1$s" value="%2$s" class="regular-text"%4$s /> <input class="button odin-upload-button" type="button" value="%3$s" />', $id, esc_url( $current ), __( 'Select file', 'odin' ), $this->build_field_attributes( $attrs ) );
+		echo sprintf( '<input type="text" id="%1$s" name="%1$s" value="%2$s"  class="regular-text"%4$s /> <input class="button odin-upload-button" type="button" value="%3$s" />', $id, esc_url( $current ), __( 'Select file', 'odin' ), $this->build_field_attributes( $attrs ) );
 	}
 
 	/**
