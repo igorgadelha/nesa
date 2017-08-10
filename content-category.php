@@ -38,7 +38,9 @@
 				if ( is_single() ) {
 						the_content();
 						if (get_post_type() == 'transparencia') {
+							$doc_file_link = get_post_meta( get_the_ID(), 'doc_files', true );
 							 echo do_shortcode(get_post_meta( get_the_ID(),'docs_code', true ));
+				 			echo '<a href='. $doc_file_link .'" class="btn btn-white-flat" download>'._e( 'Download', 'odin' ).'</a>';
 						}
 					} else {
 						the_excerpt();
