@@ -178,7 +178,7 @@ function odin_transparence_cpt_metabox () {
 	$destaque_metabox = new Odin_Metabox(
 		'documents', // Slug/ID do Metabox (obrigatório)
 		'Documento para envio', // Nome do Metabox  (obrigatório)
-		'transparencia', // Slug do Post Type, sendo possível enviar apenas um valor ou um array com vários (opcional)
+		array( 'transparencia', 'pdf'), // Slug do Post Type, sendo possível enviar apenas um valor ou um array com vários (opcional)
 		'advanced', // Contexto (opções: normal, advanced, ou side) (opcional)
 		'high' // Prioridade (opções: high, core, default ou low) (opcional)
 	);
@@ -295,3 +295,31 @@ function odin_page_cpt_metabox () {
 }
 
 add_action( 'init', 'odin_page_cpt_metabox', 1 );
+// docs metabox
+function odin_multiple_docs_cpt_metabox () {
+	$destaque_metabox = new Odin_Metabox (
+		'page-docs', // Slug/ID do Metabox (obrigatório)
+		'Múltiplos anexos', // Nome do Metabox  (obrigatório)
+		'transparencia', // Slug do Post Type, sendo possível enviar apenas um valor ou um array com vários (opcional)
+		'normal', // Contexto (opções: normal, advanced, ou side) (opcional)
+		'low' // Prioridade (opções: high, core, default ou low) (opcional)
+	);
+
+	$destaque_metabox->set_fields(
+			array(
+				array(
+						'id'         => 'docs_code', // Required
+						'label'      => __( 'Digite o código do grupo de anexos', 'odin' ), // Required
+						'type'       => 'text', // Required
+						'attributes' => array( // Optional (html input elements)
+								'placeholder' => __( '' )
+						),
+						// 'default'  => 'Default text', // Optional
+						// 'description' => __( 'Text field description', 'odin' ) // Optional
+				),
+			)
+	);
+
+}
+
+add_action( 'init', 'odin_multiple_docs_cpt_metabox', 1 );

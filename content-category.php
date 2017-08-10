@@ -35,11 +35,14 @@
 
 		<div class="entry-summary">
 			<?php
-				if ( is_single() ) :
+				if ( is_single() ) {
 						the_content();
-					else :
+						if (get_post_type() == 'transparencia') {
+							 echo do_shortcode(get_post_meta( get_the_ID(),'docs_code', true ));
+						}
+					} else {
 						the_excerpt();
-					endif;
+					}
 				?>
 		</div><!-- .entry-summary -->
 

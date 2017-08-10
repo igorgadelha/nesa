@@ -22,7 +22,8 @@ get_header(); ?>
 						 */
 						 if (get_post_type() == 'galeria') {
 							 get_template_part( 'content', get_post_format() );
-						} else {
+						}
+						else {
 							get_template_part( 'content-category', get_post_format() );
 						}
 						// If comments are open or we have at least one comment, load up the comment template.

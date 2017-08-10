@@ -45,6 +45,7 @@ class Odin_Shortcodes {
 		add_shortcode( 'gallery', array( $this, 'gallery' ) );
 		add_shortcode( 'valores', array( $this, 'valores' ) );
 		add_shortcode( 'acoes_da_obra', array( $this, 'acoes_da_obra' ) );
+		add_shortcode( 'grupo_de_documento', array( $this, 'grupo_de_documento' ) );
 	}
 
 
@@ -111,6 +112,54 @@ class Odin_Shortcodes {
 					$html .= '<div class="item">';
 					$html .= '<h2 class="headline text-gray">'. get_the_title( get_the_ID() ). '</h2>';
 					$html .= '<p class="text-justify">' . get_the_content(get_the_ID()) .'</p>';
+					$html .= '</div>';
+
+				endwhile;
+				wp_reset_query();
+			endif;
+
+			$html .= '</div>';
+
+			return $html;
+
+	}
+	function grupo_de_documento ( $atts ) {
+		extract( shortcode_atts( array(
+			'id'      => 'default',
+		), $atts ) );
+
+			$term = get_term( $id, 'grupo-de-documento' );
+
+			$args = array(
+				'orderby' => 'menu_order',
+				'order'            => 'ASC',
+				'post_status'      => 'publish',
+				'tax_query' => array(
+						array(
+								'taxonomy' => 'grupo-de-documento',
+								'field' => 'slug',
+								'terms' => $term->slug,
+						)
+				),
+			);
+
+			$loop = new WP_Query($args);
+			// var_dump ($term);
+			// var_dump ($loop);
+			$html  = '<h2 class="text-center text-gray">Anexos</h2>';
+			$html .= '<hr/>';
+			$html .= '<div class="row">';
+			// $html .= $gallery->post_title;
+			if ($loop->have_posts()):
+				// Start the Loop.
+				while ( $loop->have_posts() ) : $loop->the_post();
+					$doc_file_type = get_post_meta( get_the_ID(),'doc_file_type', true );
+					$doc_file_link = get_post_meta( get_the_ID(), 'doc_files', true );
+
+					$html .= '<div class="col-md-2">';
+					$html .= '<i class="fa fa-5x center-block text-center '. $doc_file_type.'" aria-hidden="true" style="margin: 20px auto;"></i>';
+					$html .= 	'<h4 class="text-center">'. get_the_title(get_the_ID()) .'</h4>';
+					$html .= 	'<a href="'.$doc_file_link.'" class="btn btn-white-flat text-center center-block" style="margin-top: 20px;" download>Download</a>';
 					$html .= '</div>';
 
 				endwhile;

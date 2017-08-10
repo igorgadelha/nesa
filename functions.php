@@ -397,6 +397,7 @@ function my_custom_taxonomy_columns( $columns )
 
 add_filter('manage_edit-valores-category_columns' , 'my_custom_taxonomy_columns');
 add_filter('manage_edit-acoes-sociais-da-obra_columns' , 'my_custom_taxonomy_columns');
+add_filter('manage_edit-grupo-de-documento_columns' , 'my_custom_taxonomy_columns');
 
 function my_custom_taxonomy_valores_columns_content( $content, $column_name, $term_id )
 {
@@ -413,9 +414,18 @@ function my_custom_taxonomy_columns_content( $content, $column_name, $term_id )
     }
 	return $content;
 }
+function my_custom_taxonomy_pdf_columns_content( $content, $column_name, $term_id )
+{
+    if ( 'shortcode' == $column_name ) {
+        $content = '[grupo_de_documento id="'. $term_id .'" ]';
+    }
+	return $content;
+}
 
+add_filter( 'manage_grupo-de-documento_custom_column', 'my_custom_taxonomy_pdf_columns_content', 10, 3 );
 add_filter( 'manage_valores-category_custom_column', 'my_custom_taxonomy_valores_columns_content', 10, 3 );
 add_filter( 'manage_acoes-sociais-da-obra_custom_column', 'my_custom_taxonomy_columns_content', 10, 3 );
+
 
 
 

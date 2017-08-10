@@ -59,10 +59,13 @@
 
 					<?php
 				}
+
+			?>
+			<?php
 				if (get_post_type() == 'transparencia') {
 					 echo do_shortcode(get_post_meta( get_the_ID(),'docs_code', true ));
 				}
-				
+
 				wp_link_pages( array(
 					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'odin' ) . '</span>',
 					'after'       => '</div>',

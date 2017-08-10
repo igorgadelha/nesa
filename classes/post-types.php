@@ -161,6 +161,34 @@ function odin_transparence_cpt() {
 
 add_action( 'init', 'odin_transparence_cpt', 1 );
 
+function odin_multiple_pdfs_cpt() {
+    $video = new Odin_Post_Type(
+        'pdf', // Nome (Singular) do Post Type.
+        'pdf' // Slug do Post Type.
+    );
+
+    $video->set_labels(
+        array(
+            'menu_name' => __( 'Múltiplos Anexos', 'odin' )
+        )
+    );
+
+    $video->set_arguments(
+        array(
+            'supports' => array( 'title' ),
+            'publicly_queryable'  => true,
+            'exclude_from_search' => false,
+            'has_archive'         => true,
+            'query_var'           => true,
+            'can_export'          => true,
+            'rewrite'             => true,
+            // 'show_in_menu' => 'transparencia'
+        )
+    );
+}
+
+add_action( 'init', 'odin_multiple_pdfs_cpt', 1 );
+
 function odin_diretoria_cpt() {
     $video = new Odin_Post_Type(
         'diretor', // Nome (Singular) do Post Type.

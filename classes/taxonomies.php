@@ -27,6 +27,33 @@ function odin_transparence_taxonomy() {
 
 add_action( 'init', 'odin_transparence_taxonomy', 1 );
 
+function odin_pdf_group_taxonomy() {
+    $args = array(
+        'hierarchical'      => true,
+        'public'            => true,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'show_in_nav_menus' => true,
+        'show_tagcloud'     => true,
+    );
+
+    $video = new Odin_Taxonomy(
+        __('Grupo de documento'), // Nome (Singular) da nova Taxonomia.
+        'grupo-de-documento', // Slug do Taxonomia.
+        'pdf' // Nome do tipo de conteúdo que a taxonomia irá fazer parte.
+    );
+
+    $video->set_labels(
+        array(
+            'menu_name' => __( 'Grupos de documentos', 'odin' )
+        )
+    );
+
+    $video->set_arguments( $args );
+}
+
+add_action( 'init', 'odin_pdf_group_taxonomy', 1 );
+
 function odin_partners_taxonomy() {
     $args = array(
         'hierarchical'      => true,
