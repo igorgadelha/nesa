@@ -45,9 +45,9 @@
 								$html  = '<h2 class="text-center text-gray">Anexos</h2>';
 								$html .= '<hr/>';
 								$html .= '<div class="row">';
-								$html  = '<div class="col-md-3">';
+								$html .= '<div class="col-md-3">';
 								$html .= '<i class="fa fa-5x center-block text-center '. $doc_file_type.'"></i>';
-								$html .= '<a href='. $doc_file_link .'" class="btn btn-white-flat center-block text-center" download>Download</a>';
+								$html .= '<a href='. $doc_file_link .'" class="btn btn-white-flat center-block text-center" style="margin-top:15px;" download>Download</a>';
 								$html .= '</div>';
 								$html .= '<div>';
 
