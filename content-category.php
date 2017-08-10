@@ -32,7 +32,7 @@
 		<?php endif; ?>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
+	<?php get_template_part( '_inc/breadcrumb' ); ?>
 		<div class="entry-summary">
 			<?php
 				if ( is_single() ) {
