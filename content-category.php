@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('col-xs-12 col-md-12 col-lg-12 article'); ?>>
-	<header class="entry-header <?php if ( is_single() ) { echo 'parallax'; } ?>" style="<?php if ( is_single() ) { echo 'background:    linear-gradient(rgba(255, 255, 255, 0.45), rgba( 0, 0, 0, 0.45)), url(' . get_the_post_thumbnail_url(null, "large") .')'; } ?>">
+	<header class="entry-header <?php if ( is_single() ) { echo 'parallax'; } ?>" style="<?php if ( is_single() ) { echo 'background:    linear-gradient(rgba(255, 255, 255, 0.45), rgba( 0, 0, 0, 0.45)), url(' . get_the_post_thumbnail_url(null, "large") .');margin-bottom:30px;'; } ?>">
 		<?php
 			$date = explode ( '-', get_the_date('F-d') );
 			?>
