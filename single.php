@@ -10,7 +10,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<main id="content" class="" tabindex="-1" role="main">
-				<?php get_template_part( '_inc/breadcrumb' ); ?>
+				<?php //get_template_part( '_inc/breadcrumb' ); ?>
 				<?php
 					// Start the Loop.
 					while ( have_posts() ) : the_post();

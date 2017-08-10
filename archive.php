@@ -20,6 +20,7 @@ get_header(); ?>
 					?>
 				</header><!-- .page-header -->
 
+				<?php get_template_part( '_inc/breadcrumb' ); ?>
 
 				<div class="row" style="margin-bottom:20px;">
 					<form method="get" class="form-inline" action="<?php echo '/'; ?>" role="search">
