@@ -38,9 +38,23 @@
 				if ( is_single() ) {
 						the_content();
 						if (get_post_type() == 'transparencia') {
-							$doc_file_link = get_post_meta( get_the_ID(), 'doc_files', true );
-							 echo do_shortcode(get_post_meta( get_the_ID(),'docs_code', true ));
-				 			echo '<a href='. $doc_file_link .'" class="btn btn-white-flat" download>'._e( 'Download', 'odin' ).'</a>';
+							$doc_file_type = get_post_meta( get_the_ID(), 'doc_file_type', true );
+
+							if ( $doc_file_type ) {
+								$doc_file_link = get_post_meta( get_the_ID(), 'doc_files', true );
+								$html  = '<div class="row">';
+								$html  = '<div class="col-md-3">';
+								$html .= '<i class="fa fa-5x center-block text-center '. $doc_file_type.'"></i>';
+								$html .= '<a href='. $doc_file_link .'" class="btn btn-white-flat" download>'._e( 'Download', 'odin' ).'</a>';
+								$html .= '</div>';
+								$html .= '<div>';
+
+								echo $html;
+							}
+
+
+						 	echo do_shortcode(get_post_meta( get_the_ID(),'docs_code', true ));
+
 						}
 					} else {
 						the_excerpt();
