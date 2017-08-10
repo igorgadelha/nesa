@@ -9,25 +9,22 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('col-xs-12 col-md-12 col-lg-12 article'); ?>>
-	<div class="col-md-3 col-lg-3 col-xs-12">
+<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-3 col-lg-3 col-xs-12 article'); ?>>
 		<?php
 			if ( is_single() ) :
 
 			else :
 				$doc_file_type = get_post_meta( get_the_ID(),'doc_file_type', true );
 				$doc_file_link = get_post_meta( get_the_ID(), 'doc_files', true );
-				echo '<i class="fa fa-5x center-block text-center '. $doc_file_type.'" aria-hidden="true" style="margin-top: 40px;font-size: 100pt;"></i>';
+				echo '<i class="fa fa-5x center-block text-center '. $doc_file_type.'" aria-hidden="true" style="margin-top: 40px;"></i>';
 			endif;
 			?>
-	</div>
-	<div class="col-md-9 col-lg-9 col-xs-12">
 		<header class="entry-header">
 			<?php
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
 				else :
-					the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+					the_title( '<h3 class="entry-title text-center"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 				endif;
 				?>
 
@@ -39,14 +36,13 @@
 				<?php endif; ?>
 			<?php endif; ?>
 		</header><!-- .entry-header -->
-		<div class="entry-summary">
-			<?php the_excerpt(); ?>
+		<div class="entry-summary text-center center-block">
+			<!-- <?php the_excerpt('',array('class' => 'text-center center-block')); ?> -->
 		</div><!-- .entry-summary -->
 
 		<footer class="entry-meta">
-			<a href="<?php echo $doc_file_link; ?>" class="btn btn-white-flat pull-right" download><?php _e( 'Download', 'odin' ); ?></a>
+			<a href="<?php echo esc_url( get_permalink() ) ?>" class="btn btn-white-flat text-center center-block"><?php _e( 'Ver documento', 'odin' ); ?></a>
 		</footer>
-	</div>
 
 
 </article><!-- #post-## -->
