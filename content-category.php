@@ -39,9 +39,9 @@
 						the_content();
 						if (get_post_type() == 'transparencia') {
 							$doc_file_type = get_post_meta( get_the_ID(), 'doc_file_type', true );
-
-							if ( $doc_file_type ) {
-								$doc_file_link = get_post_meta( get_the_ID(), 'doc_files', true );
+							$doc_file_link = get_post_meta( get_the_ID(), 'doc_files', true );
+		
+							if ( $doc_file_link ) {
 								$html  = '<h2 class="text-center text-gray">Anexos</h2>';
 								$html .= '<hr/>';
 								$html .= '<div class="row">';
