@@ -9,7 +9,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-3 col-lg-3 col-xs-12 article'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-4 col-lg-4 col-xs-12 article'); ?>>
 		<?php
 			if ( is_single() ) :
 
