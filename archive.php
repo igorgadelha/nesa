@@ -63,12 +63,7 @@ get_header(); ?>
 									 * (where ___ is the post format) and that will be used instead.
 									 */
 									 if( get_post_type() !== 'post') {
-										 if ( get_post_type() !== 'transparencia' ) {
-											 get_template_part( 'content-docs', get_post_format() );
-										 } else {
-											 get_template_part( 'content-multimidia', get_post_format() );
-										 }
-									 }
+										 get_template_part( 'content-multimidia', get_post_format() );
 									 } else {
 										 get_template_part( 'content-category-2', get_post_format() );
 									 }
