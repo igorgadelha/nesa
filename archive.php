@@ -64,6 +64,9 @@ get_header(); ?>
 									 */
 									 if( get_post_type() !== 'post') {
 										 get_template_part( 'content-multimidia', get_post_format() );
+									 } else if ( get_post_type() !== 'transparencia' ) {
+										 get_template_part( 'content-docs', get_post_format() );
+									 }
 									 } else {
 										 get_template_part( 'content-category-2', get_post_format() );
 									 }
