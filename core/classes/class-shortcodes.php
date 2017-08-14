@@ -156,7 +156,7 @@ class Odin_Shortcodes {
 					$doc_file_type = get_post_meta( get_the_ID(),'doc_file_type', true );
 					$doc_file_link = get_post_meta( get_the_ID(), 'doc_files', true );
 
-					$html .= '<div class="col-md-2">';
+					$html .= '<div class="col-md-3">';
 					$html .= '<i class="fa fa-5x center-block text-center '. $doc_file_type.'" aria-hidden="true" style="margin: 20px auto;"></i>';
 					$html .= 	'<h4 class="text-center">'. get_the_title(get_the_ID()) .'</h4>';
 					$html .= 	'<a href="'.$doc_file_link.'" class="btn btn-white-flat text-center center-block" style="margin-top: 20px;" download>Download</a>';
