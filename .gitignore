@@ -37,4 +37,3 @@ sftp-config.json
 .ftppass
 *.zip
 src/node_modules/*
-assets/library/*
