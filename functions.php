@@ -38,7 +38,7 @@ require_once get_template_directory() . '/core/classes/class-contact-form.php';
 // require_once get_template_directory() . '/core/classes/class-user-meta.php';
 require_once get_template_directory() . '/core/classes/class-post-status.php';
 require_once get_template_directory() . '/core/classes/class-term-meta.php';
-// require_once ('wp-bootstrap-navwalker.php');
+require_once ('yamm-nav-walker.php');
 /**
  * Odin Widgets.
  */
@@ -275,8 +275,11 @@ function odin_enqueue_scripts() {
 		// bootstrap-toggle-js
 		wp_enqueue_style( 'bootstrap-toggle-css', $template_url . '/assets/library/bootstrap-toggle/css/bootstrap-toggle.min.css' );
 
+
 		// fotorama-css
 		wp_enqueue_style( 'fotorama-css', $template_url . '/assets/library/fotorama/fotorama.css' );
+		// bootstrap-yamm-css
+		wp_enqueue_style( 'bootstrap-yamm-css', $template_url . '/assets/library/Yamm3/yamm/yamm.css' );
 
 
 		// Loads Odin main stylesheet.

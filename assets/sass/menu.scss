@@ -37,22 +37,53 @@
 #menu-principal {
   li {
     &.active {
-      a {
+      > a {
           background-color: $primary !important;
           color: white !important;
       }
     }
     a {
-      color: $primary !important;
+      color: $primary;
       text-align:center !important;
       font-size: 11.1pt;
-      padding: 10px 8px;
+      // padding: 10px 8px;
 
       &:hover, &:active, &.active {
         background-color: $primary !important;
         color: white !important;
       }
 
+    }
+  }
+  ul.dropdown-menu {
+    div.yamm-content {
+      div.row {
+        li.dropdown {
+         > a {
+            color: $gray !important;
+            font-weight: bold;
+            font-size:13pt;
+            &:hover, &:active, &.active {
+              background-color: transparent  !important;
+              border-bottom: 1px solid $primary;
+              text-decoration: none !important;
+            }
+          }
+          ul.elementy-ul.yamm-fw {
+            li {
+               a {
+                color: $primary !important;
+                 &:hover, &:active, &.active {
+                   color: $primary !important;
+                   background-color: transparent  !important;
+                   border-bottom: 1px solid $primary;
+                   text-decoration: none !important;
+                 }
+               }
+            }
+          }
+        }
+      }
     }
   }
 }

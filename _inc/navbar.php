@@ -55,16 +55,25 @@
         <nav class="collapse navbar-collapse navbar-main-navigation" role="navigation"  id="bs-example-navbar-collapse-1">
 
           <?php
-            wp_nav_menu(
-              array(
-                'theme_location' => 'main-menu',
-                'depth'          => 2,
-                'container'      => false,
-                'menu_class'     => 'nav navbar-nav',
-                'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-                'walker'         => new Odin_Bootstrap_Nav_Walker()
-              )
-            );
+          wp_nav_menu( array(
+              'menu'              => 'primary',
+              'theme_location'    => 'main-menu',
+              'depth'             => 4,
+              'container'         => false,
+              'menu_class'        => 'nav navbar-nav yamm',
+              'fallback_cb'       => 'Yamm_Nav_Walker_menu_fallback',
+              'walker'            => new Yamm_Nav_Walker())
+          );
+            // wp_nav_menu(
+            //   array(
+            //     'theme_location' => 'main-menu',
+            //     'depth'          => 3,
+            //     'container'      => false,
+            //     'menu_class'     => 'nav navbar-nav',
+            //     'fallback_cb'       => 'Yamm_Nav_Walker_menu_fallback',
+            //     'walker'            => new Yamm_Nav_Walker()
+            //   )
+            // );
           ?>
           <form method="get" class="navbar-form navbar-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
             <label for="navbar-search" class="sr-only">
