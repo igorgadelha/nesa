@@ -75,7 +75,7 @@
             //   )
             // );
           ?>
-          <form method="get" class="navbar-form navbar-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+          <form method="get" class="navbar-form navbar-right hidden-md hidden-lg" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
             <label for="navbar-search" class="sr-only">
               <?php _e( 'Search:', 'odin' ); ?>
             </label>
