@@ -48,7 +48,7 @@ class Yamm_Nav_Walker extends Walker_Nav_Menu
             $element->classes[] = 'dropdown';
         }
         if ($element && ($depth === 1)) {
-            $element->classes[] = 'col-sm-6 col-xs-6 col-md-6 col-lg-6 menu-col';
+            $element->classes[] = 'col-sm-6 col-xs-6 col-md-4 col-lg-4 menu-col';
         }
 
         parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
