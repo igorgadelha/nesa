@@ -46,7 +46,6 @@ get_header(); ?>
 				</div>
 
 				<div class="row">
-					<h2 class="text-gray">Documentos</h2>
 					<div class="col-md-9 col-lg-9 col-xs-12">
 						<div class="row">
 
