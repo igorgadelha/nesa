@@ -45,9 +45,11 @@
 								$html  = '<h2 class="text-center text-gray">Anexos</h2>';
 								$html .= '<hr/>';
 								$html .= '<div class="row">';
-								$html .= '<div class="col-md-3">';
+								$html .= '<div class="col-md-2">';
 								$html .= '<i class="fa fa-5x center-block text-center '. $doc_file_type.'"></i>';
-								$html .= '<h4 class="text-center"><a href='. $doc_file_link .'" class=" center-block text-center" style="margin-top:15px;" download>'.get_the_title(get_the_ID()).'</a></h4>';
+								$html .= '</div>';
+								$html .= '<div class="col-md-10">';
+								$html .= '<h6 class="text-center"><a href='. $doc_file_link .'" class=" center-block text-center" style="margin-top:15px;" download>'.get_the_title(get_the_ID()).'</a></h6>';
 								$html .= '</div>';
 								$html .= '<div>';
 
