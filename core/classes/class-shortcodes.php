@@ -161,7 +161,7 @@ class Odin_Shortcodes {
 							$html .= '<i class="fa fa-5x center-block text-center '. $doc_file_type.'" aria-hidden="true" style="margin: 5px auto;"></i>';
 						$html .= '</div>';
 						$html .= '<div class="col-md-9">';
-							$html .= 	'<p class="text-left">'. get_the_title(get_the_ID()) .'</p>';
+							$html .= 	'<h6 class="text-left">'. get_the_title(get_the_ID()) .'</h6>';
 							$html .= 	'<a href="'.$doc_file_link.'" class="btn btn-white-flat text-center" style="margin-top: 5px;" download>Download</a>';
 						$html .= '</div>';
 					$html .= '</div>';
