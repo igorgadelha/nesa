@@ -69,7 +69,9 @@
               text-decoration: none !important;
             }
           }
-          ul.elementy-ul.yamm-fw {
+          ul.yamm-fw {
+            padding-left: 15px !important;
+            list-style: none !important;
             li {
                a {
                 color: $primary !important;
