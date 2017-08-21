@@ -1,14 +1,6 @@
 <?php
 
 function odin_transparence_taxonomy() {
-    $args = array(
-        'hierarchical'      => true,
-        'public'            => true,
-        'show_ui'           => true,
-        'show_admin_column' => true,
-        'show_in_nav_menus' => true,
-        'show_tagcloud'     => true,
-    );
 
     $video = new Odin_Taxonomy(
         'Tipo de documento', // Nome (Singular) da nova Taxonomia.
@@ -22,7 +14,22 @@ function odin_transparence_taxonomy() {
         )
     );
 
-    $video->set_arguments( $args );
+    $video->set_arguments(
+      array(
+        'hierarchical'      => true,
+        'public'            => true,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'show_tagcloud'     => true,
+        'show_in_nav_menus' => true,
+        'publicly_queryable'  => true,
+        'exclude_from_search' => false,
+        'has_archive'         => true,
+        'query_var'           => true,
+        'can_export'          => true,
+        'rewrite'             => true,
+    )
+  );
 }
 
 add_action( 'init', 'odin_transparence_taxonomy', 1 );
