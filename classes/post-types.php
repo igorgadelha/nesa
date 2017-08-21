@@ -150,6 +150,7 @@ function odin_transparence_cpt() {
             'supports' => array( 'title', 'editor' ),
 						'menu_icon'	=> 'dashicons-media-document',
             'publicly_queryable'  => true,
+            'show_in_nav_menus' => true,
             'exclude_from_search' => false,
             'has_archive'         => true,
             'query_var'           => true,
