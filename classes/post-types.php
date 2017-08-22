@@ -3,13 +3,21 @@
 
 function odin_videos_cpt() {
     $video = new Odin_Post_Type(
-        'video', // Nome (Singular) do Post Type.
+        __( 'video', 'odin' ), // Nome (Singular) do Post Type.
         'video' // Slug do Post Type.
     );
 
     $video->set_labels(
         array(
-            'menu_name' => __( 'Videos', 'odin' )
+            'menu_name' => __( 'Vídeos', 'odin' ),
+            'name'               => __( 'vídeo', 'odin' ),
+            'singular_name'      => __( 'vídeo', 'odin' ),
+            'add_new'            => __( 'adicionar novo vídeo', 'odin' ),
+            'new_item'           => __( 'novo vídeo', 'odin' ),
+            'edit_item'          => __( 'editar vídeo', 'odin' ),
+            'view_item'          => __( 'Ver vídeo', 'odin' ),
+            'all_items'          => __( 'todas os vídeos', 'odin' ),
+            'search_items'       => __( 'pesquisar vídeos', 'odin' ),
         )
     );
 
@@ -35,13 +43,21 @@ add_action( 'init', 'odin_videos_cpt', 1 );
 
 function odin_audio_cpt() {
     $video = new Odin_Post_Type(
-        'audio', // Nome (Singular) do Post Type.
+        __('audio', 'odin'), // Nome (Singular) do Post Type.
         'audio' // Slug do Post Type.
     );
 
     $video->set_labels(
         array(
-            'menu_name' => __( 'Audios', 'odin' )
+            'menu_name'          => __( 'Áudios', 'odin' ),
+            'name'               => __( 'áudio', 'odin' ),
+            'singular_name'      => __( 'áudio', 'odin' ),
+            'add_new'            => __( 'adicionar novo áudio', 'odin' ),
+            'new_item'           => __( 'novo áudio', 'odin' ),
+            'edit_item'          => __( 'editar áudio', 'odin' ),
+            'view_item'          => __( 'Ver áudio', 'odin' ),
+            'all_items'          => __( 'todas os áudios', 'odin' ),
+            'search_items'       => __( 'pesquisar áudios', 'odin' ),
         )
     );
 
@@ -81,13 +97,21 @@ function odin_gallery_cpt() {
 	    'rewrite'             => true,
 	);
     $video = new Odin_Post_Type(
-        'galeria', // Nome (Singular) do Post Type.
+        __( 'galeria', 'odin' ), // Nome (Singular) do Post Type.
         'galeria' // Slug do Post Type.
     );
 
     $video->set_labels(
         array(
-            'menu_name' => __( 'Galerias', 'odin' )
+            'menu_name'          => __( 'Galerias', 'odin' ),
+            'name'               => __( 'galeria', 'odin' ),
+            'singular_name'      => __( 'galeria', 'odin' ),
+            'add_new'            => __( 'adicionar nova galeria', 'odin' ),
+            'new_item'           => __( 'nova galeria', 'odin' ),
+            'edit_item'          => __( 'editar galeria', 'odin' ),
+            'view_item'          => __( 'Ver galeria', 'odin' ),
+            'all_items'          => __( 'todas as galerias', 'odin' ),
+            'search_items'       => __( 'pesquisar galerias', 'odin' ),
         )
     );
 
@@ -113,13 +137,21 @@ add_action( 'init', 'odin_gallery_cpt', 1 );
 
 function odin_carousel_cpt() {
     $video = new Odin_Post_Type(
-        'destaque', // Nome (Singular) do Post Type.
+        __( 'destaque', 'odin' ), // Nome (Singular) do Post Type.
         'destaque' // Slug do Post Type.
     );
 
     $video->set_labels(
         array(
-            'menu_name' => __( 'Destaque', 'odin' )
+            'menu_name'          => __( 'Destaque', 'odin' ),
+            'name'               => __( 'destaque', 'odin' ),
+            'singular_name'      => __( 'destaque', 'odin' ),
+            'add_new'            => __( 'adicionar novo destaque', 'odin' ),
+            'new_item'           => __( 'novo destaque', 'odin' ),
+            'edit_item'          => __( 'editar destaque', 'odin' ),
+            'view_item'          => __( 'Ver destaque', 'odin' ),
+            'all_items'          => __( 'todos os destaques', 'odin' ),
+            'search_items'       => __( 'pesquisar destaques', 'odin' ),
         )
     );
 
@@ -135,13 +167,21 @@ add_action( 'init', 'odin_carousel_cpt', 1 );
 
 function odin_transparence_cpt() {
     $video = new Odin_Post_Type(
-        'documento', // Nome (Singular) do Post Type.
+      __('documento', 'odin'), // Nome (Singular) do Post Type.
         'transparencia' // Slug do Post Type.
     );
 
     $video->set_labels(
         array(
-            'menu_name' => __( 'Documentos', 'odin' )
+            'menu_name'          => __( 'Documentos', 'odin' ),
+            'name'               => __( 'documento', 'odin' ),
+            'singular_name'      => __( 'documento', 'odin' ),
+            'add_new'            => __( 'adicionar novo documento', 'odin' ),
+            'new_item'           => __( 'novo documento', 'odin' ),
+            'edit_item'          => __( 'editar documento', 'odin' ),
+            'view_item'          => __( 'Ver documento', 'odin' ),
+            'all_items'          => __( 'todos os documentos', 'odin' ),
+            'search_items'       => __( 'pesquisar documentos', 'odin' ),
         )
     );
 
@@ -164,7 +204,7 @@ add_action( 'init', 'odin_transparence_cpt', 1 );
 
 function odin_multiple_pdfs_cpt() {
     $video = new Odin_Post_Type(
-        'pdf', // Nome (Singular) do Post Type.
+        __('pdf', 'odin'), // Nome (Singular) do Post Type.
         'pdf' // Slug do Post Type.
     );
 

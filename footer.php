@@ -90,7 +90,7 @@
 					<div class="col-xs-12 hidden-lg hidden-md"><hr/></div>
 					<!-- linha separadora mobile -->
 					<!-- widgets de endereços do lado direito (visíveis apenas no mobile) -->
-					<div class="col-xs-12 col-md-4 col-lg-4 hidden-lg hidden-lg">
+					<div class="col-xs-12 col-md-4 col-lg-4 hidden-lg hidden-md">
 						<?php  dynamic_sidebar( 'footer-sidebar-right' ); ?>
 					</div>
 					<!-- widgets de endereços do lado direito (visíveis apenas no mobile) -->
